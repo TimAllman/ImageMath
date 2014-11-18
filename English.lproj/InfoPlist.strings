@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "ImageMath";
+CFBundleShortVersionString = "1.0";
+CFBundleGetInfoString = "ImageMath version 1.0, Copyright (c) 2014 Tim.";
+NSHumanReadableCopyright = "Copyright (c) 2014 Tim.";
