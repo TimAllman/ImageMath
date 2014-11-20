@@ -8,11 +8,14 @@
 #import <Foundation/Foundation.h>
 #import <OsiriXAPI/PluginFilter.h>
 
+@class DialogController;
+
 @interface ImageMathFilter : PluginFilter
 {
-
+    DialogController* dialogController;
 }
 
 - (long) filterImage:(NSString*) menuName;
+
 
 @end
