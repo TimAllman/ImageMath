@@ -21,6 +21,8 @@
 		222764EA1A1BC07B00C68500 /* MainDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222764E91A1BC07B00C68500 /* MainDialog.xib */; };
 		222764ED1A1BC0C800C68500 /* DialogController.h in Headers */ = {isa = PBXBuildFile; fileRef = 222764EB1A1BC0C800C68500 /* DialogController.h */; };
 		222764EE1A1BC0C800C68500 /* DialogController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 222764EC1A1BC0C800C68500 /* DialogController.mm */; };
+		228963C21A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.h in Headers */ = {isa = PBXBuildFile; fileRef = 228963C01A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.h */; };
+		228963C31A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 228963C11A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.m */; };
 		22A745351A1D1D6000F55DB0 /* liblog4cplusS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A745341A1D1D6000F55DB0 /* liblog4cplusS.a */; };
 		8D5B49AE048680CD000E48DA /* ImageMath_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32DBCF630370AF2F00C91783 /* ImageMath_Prefix.pch */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
@@ -48,6 +50,8 @@
 		222764E91A1BC07B00C68500 /* MainDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainDialog.xib; sourceTree = "<group>"; };
 		222764EB1A1BC0C800C68500 /* DialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogController.h; sourceTree = "<group>"; };
 		222764EC1A1BC0C800C68500 /* DialogController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DialogController.mm; sourceTree = "<group>"; };
+		228963C01A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewerController+ExportTimeSeries.h"; sourceTree = "<group>"; };
+		228963C11A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewerController+ExportTimeSeries.m"; sourceTree = "<group>"; };
 		22A745341A1D1D6000F55DB0 /* liblog4cplusS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblog4cplusS.a; path = ../../../../usr/local/lib/liblog4cplusS.a; sourceTree = "<group>"; };
 		32DBCF630370AF2F00C91783 /* ImageMath_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMath_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,12 +115,15 @@
 				222764EC1A1BC0C800C68500 /* DialogController.mm */,
 				ABA48A640680BB600089EB4F /* ImageMathFilter.h */,
 				ABA48A660680BB690089EB4F /* ImageMathFilter.mm */,
-				222764D51A1BA0E600C68500 /* LoggerUtils.cpp */,
 				222764D61A1BA0E600C68500 /* LoggerUtils.h */,
+				222764D51A1BA0E600C68500 /* LoggerUtils.cpp */,
 				222764DD1A1BB78300C68500 /* Parameters.h */,
 				222764DE1A1BB78300C68500 /* Parameters.m */,
+				222764E21A1BBCAB00C68500 /* ProjectDefs.h */,
 				222764D91A1BB6B300C68500 /* UserDefaults.h */,
 				222764DA1A1BB6B300C68500 /* UserDefaults.m */,
+				228963C01A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.h */,
+				228963C11A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -158,7 +165,6 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				222764E21A1BBCAB00C68500 /* ProjectDefs.h */,
 				32DBCF630370AF2F00C91783 /* ImageMath_Prefix.pch */,
 				222764E11A1BBCAB00C68500 /* LICENSE */,
 				222764E31A1BBCAB00C68500 /* README.md */,
@@ -179,6 +185,7 @@
 				8D5B49AE048680CD000E48DA /* ImageMath_Prefix.pch in Headers */,
 				222764ED1A1BC0C800C68500 /* DialogController.h in Headers */,
 				ABA48A650680BB600089EB4F /* ImageMathFilter.h in Headers */,
+				228963C21A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.h in Headers */,
 				222764DB1A1BB6B300C68500 /* UserDefaults.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABA48A670680BB690089EB4F /* ImageMathFilter.mm in Sources */,
+				228963C31A1F7B3C00E4799C /* ViewerController+ExportTimeSeries.m in Sources */,
 				222764EE1A1BC0C800C68500 /* DialogController.mm in Sources */,
 				222764DC1A1BB6B300C68500 /* UserDefaults.m in Sources */,
 				222764D71A1BA0E600C68500 /* LoggerUtils.cpp in Sources */,

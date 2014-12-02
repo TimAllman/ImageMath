@@ -7,25 +7,167 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DialogController">
             <connections>
+                <outlet property="operationCombobox" destination="N5P-wB-Bs0" id="2vm-PG-bYw"/>
                 <outlet property="params" destination="hba-9w-QYG" id="LD6-M7-RYq"/>
+                <outlet property="resultSeriesDescriptionRextField" destination="wwu-OI-UKB" id="nCg-dA-Si3"/>
+                <outlet property="series1DescriptionCombobox" destination="RqE-Z8-O5d" id="qNG-Mf-UxI"/>
+                <outlet property="series2DescriptionCombobox" destination="m54-if-HNN" id="bQx-z5-hUQ"/>
                 <outlet property="window" destination="Fcj-w1-1Vf" id="vcO-bt-v4O"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
         <customObject id="hba-9w-QYG" customClass="Parameters"/>
-        <window title="ImageMath" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="ImageMath" animationBehavior="default" id="Fcj-w1-1Vf" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
+        <window title="ImageMath" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="ImageMathMainDialog" animationBehavior="default" id="Fcj-w1-1Vf" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1223" y="548" width="276" height="378"/>
+            <rect key="contentRect" x="1223" y="548" width="397" height="362"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="Rhq-qP-mV4">
-                <rect key="frame" x="0.0" y="0.0" width="276" height="378"/>
+                <rect key="frame" x="0.0" y="0.0" width="397" height="362"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" id="Z2V-4k-4hE">
+                        <rect key="frame" x="17" y="16" width="363" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="361" height="47"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <button verticalHuggingPriority="750" id="fgO-IN-nnc">
+                                    <rect key="frame" x="251" y="7" width="98" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                    <buttonCell key="cell" type="push" title="Calculate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="e91-CB-1vq">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="calculateButtonPressed:" target="-2" id="hIm-0f-d7X"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" id="SAN-ht-Ur7">
+                                    <rect key="frame" x="177" y="7" width="74" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                    <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vOL-L8-WIe">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="closeButtonPressed:" target="-2" id="itM-db-KWd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" id="jIF-Ah-sTa">
+                        <rect key="frame" x="17" y="67" width="363" height="277"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="361" height="275"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="QEm-Cw-9FX">
+                                    <rect key="frame" x="16" y="154" width="53" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Series 2" id="fQ7-SK-Z9y">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="RFk-nl-Qb5">
+                                    <rect key="frame" x="16" y="201" width="67" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Operation" id="3g9-vr-sIa">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7wv-As-rae">
+                                    <rect key="frame" x="16" y="108" width="43" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Result" id="ks5-AZ-pLi">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ivs-iI-gjA">
+                                    <rect key="frame" x="16" y="246" width="53" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Series 1" id="hiv-yZ-Q6y">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <comboBox verticalHuggingPriority="750" id="RqE-Z8-O5d">
+                                    <rect key="frame" x="18" y="222" width="328" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <comboBoxCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Series description" drawsBackground="YES" usesSingleLineMode="YES" usesDataSource="YES" numberOfVisibleItems="5" id="AWN-zq-57c">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </comboBoxCell>
+                                    <connections>
+                                        <binding destination="hba-9w-QYG" name="value" keyPath="self.seriesDescription1" id="5HW-D0-n4i"/>
+                                        <outlet property="dataSource" destination="-2" id="d3F-7u-CEl"/>
+                                        <outlet property="delegate" destination="-2" id="lca-iU-Uyq"/>
+                                    </connections>
+                                </comboBox>
+                                <comboBox verticalHuggingPriority="750" tag="1" id="N5P-wB-Bs0">
+                                    <rect key="frame" x="18" y="175" width="154" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" usesDataSource="YES" numberOfVisibleItems="5" id="rbm-b5-CnJ">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </comboBoxCell>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-2" id="wvF-vv-5Dm"/>
+                                        <outlet property="delegate" destination="-2" id="GuV-UP-fU5"/>
+                                    </connections>
+                                </comboBox>
+                                <textField verticalHuggingPriority="750" id="wwu-OI-UKB">
+                                    <rect key="frame" x="18" y="18.000002518296185" width="325" height="88"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Series description" drawsBackground="YES" id="YoS-ah-ing">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="hba-9w-QYG" name="value" keyPath="self.seriesDescriptionResult" id="Q16-VV-4No"/>
+                                    </connections>
+                                </textField>
+                                <comboBox verticalHuggingPriority="750" tag="2" id="m54-if-HNN">
+                                    <rect key="frame" x="18" y="129" width="328" height="26"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <comboBoxCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Series description" drawsBackground="YES" usesSingleLineMode="YES" usesDataSource="YES" numberOfVisibleItems="5" id="nro-sW-Qnz">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </comboBoxCell>
+                                    <connections>
+                                        <binding destination="hba-9w-QYG" name="value" keyPath="self.seriesDescription2" id="3SR-dE-46A"/>
+                                        <outlet property="dataSource" destination="-2" id="nG2-z9-Awx"/>
+                                        <outlet property="delegate" destination="-2" id="BF3-tf-2RZ"/>
+                                    </connections>
+                                </comboBox>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="Nzt-HC-C2a"/>
             </connections>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="Gsi-yx-cXJ"/>
     </objects>
 </document>

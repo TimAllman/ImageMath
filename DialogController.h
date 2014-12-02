@@ -11,16 +11,26 @@
 @class ImageMathFilter;
 @class Logger;
 @class Parameters;
+@class ViewerController;
 
-@interface DialogController : NSWindowController <NSWindowDelegate>
+@interface DialogController : NSWindowController <NSWindowDelegate, NSComboBoxDataSource, NSComboBoxDelegate>
 {
     Logger* logger;
     ImageMathFilter* parentFilter;
     NSArray* viewers;
-
+    ViewerController* resultViewer;
+    
     IBOutlet Parameters *params;
+    IBOutlet NSComboBox *series1DescriptionCombobox;
+    IBOutlet NSComboBox *operationCombobox;
+    IBOutlet NSComboBox *series2DescriptionCombobox;
+    IBOutlet NSTextField *resultSeriesDescriptionRextField;
 }
 
-- (id)initWithViewers:(NSArray*)viewerArray andFilter:(ImageMathFilter*)filter;
+@property (readonly) Parameters* params;
+
+- (id)initWithFilter:(ImageMathFilter*)filter;
+- (IBAction)calculateButtonPressed:(id)sender;
+- (IBAction)closeButtonPressed:(id)sender;
 
 @end

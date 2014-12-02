@@ -12,6 +12,7 @@
  */
 // General program defaults
 extern NSString* const LoggerLevelKey;
+extern NSString* const ResultSeriesDescriptionKey;
 
 @class Logger;
 @class Parameters;

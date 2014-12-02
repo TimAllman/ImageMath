@@ -32,9 +32,21 @@ enum SeriesStatus
 {
     CONFORMANT,    ///< Suitable for calculation.
     TOO_FEW,       ///< Not enough image series for calculation.
-    TOO_MANY,      ///< More than enough image series for calculation.
-    NONCONFORMANT  ///< Not suitable for some reason.
+    NONCONFORMANT  ///< Not suitable for some other reason.
 };
+
+///**
+// * Used to select image operations. Must be coordinated with static NSArray* operations
+// * in DialogController.mm
+// */
+//enum Operation
+//{
+//    ADD,
+//    SUBTRACT,
+//    MULTIPLY,
+//    DIVIDE,
+//    LN_DIFF
+//};
 
 // The name of the logger used through this plugin.
 #define LOGGER_NAME "ca.brasscats.osirix.ImageMath"

@@ -17,5 +17,10 @@
 
 - (long) filterImage:(NSString*) menuName;
 
+/**
+ * Duplicates a 4D viewer.
+ * @returns The new 4D viewer instance
+ */
+- (ViewerController*)copy4DViewer:(ViewerController*)viewer;
 
 @end

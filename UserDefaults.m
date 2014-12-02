@@ -15,6 +15,7 @@
 
 // General program defaults
 NSString* const LoggerLevelKey = @"LoggerLevel";
+NSString* const ResultSeriesDescriptionKey = @"ResultSeriesDescription";
 
 static NSMutableDictionary *defaultsDict;
 static NSString* bundleId;
@@ -64,6 +65,7 @@ static UserDefaults* sharedInstance;
     NSDictionary* d =
     [NSDictionary dictionaryWithObjectsAndKeys:
      [NSNumber numberWithInt:LOG4M_LEVEL_DEBUG], LoggerLevelKey,
+     @"", ResultSeriesDescriptionKey,
      nil];
     
     return d;
