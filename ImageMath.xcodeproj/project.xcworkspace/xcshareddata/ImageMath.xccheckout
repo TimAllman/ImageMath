@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>22F06B88-E455-415F-B7E5-C42E825B8523</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ImageMath</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8390EA3129CDAB8E6711C85BCCAF568CF2D33B9B</key>
+		<string>https://github.com/TimAllman/ImageMath.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ImageMath.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8390EA3129CDAB8E6711C85BCCAF568CF2D33B9B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TimAllman/ImageMath.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8390EA3129CDAB8E6711C85BCCAF568CF2D33B9B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8390EA3129CDAB8E6711C85BCCAF568CF2D33B9B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ImageMath</string>
+		</dict>
+	</array>
+</dict>
+</plist>
